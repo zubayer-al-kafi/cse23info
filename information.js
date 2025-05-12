@@ -388,7 +388,7 @@ for (let i = 0; i < student.length; i++) {
     students.push({
       name: student[i],
       roll: `2207004`,
-      img: `https://i.pravatar.cc/150?img=${(i % 70) + 1}`,
+      img: `./CSE 23 Photos/${i + 1}.jpg`,
       phone: Phones[i],
       mail: emails[i],
     });
@@ -398,7 +398,7 @@ for (let i = 0; i < student.length; i++) {
   students.push({
     name: student[i],
     roll: `2307${String(Number(i) + 1).padStart(3, "0")}`,
-    img: `https://i.pravatar.cc/150?img=${(i % 70) + 1}`,
+    img: `./CSE 23 Photos/${i + 1}.jpg`,
     phone: Phones[i],
     email: emails[i],
   });
