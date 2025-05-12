@@ -420,7 +420,7 @@ function renderCards(data) {
     // Add content to the card
     card.innerHTML = `
           <a href="${student.img}">
-            <img src="${student.img}" onerror="this.onerror=null;this.src='./CSE 23 Photos/default.jpg';" class="w-24 h-24 mx-auto rounded-full border-2 border-purple-500 hover:scale-150 duration-200" />
+            <img src="${student.img}" onerror="this.onerror=null;this.src='https://picsum.photos/200';" class="w-24 h-24 mx-auto rounded-full border-2 border-purple-500 hover:scale-150 duration-200" />
           </a>
           <h2 class="mt-4 font-semibold text-lg">${student.name}</h2>
           <p class="text-gray-600 text-sm">Roll: ${student.roll}</p>
