@@ -378,10 +378,9 @@ const emails = [
   "madiharahmanr20@gmail.com",
 ];
 
-// Create an array to store student objects
 const students = [];
 
-// Loop through the student names and generate student objects
+//student objects
 for (let i = 0; i < student.length; i++) {
   //for nishad vai
   if (i === 123) {
@@ -404,55 +403,59 @@ for (let i = 0; i < student.length; i++) {
   });
 }
 
-// Get references to the grid container and search box
 const grid = document.getElementById("studentGrid");
 const searchBox = document.getElementById("searchBox");
 
-// Function to render student cards in the grid
 function renderCards(data) {
-  grid.innerHTML = ""; // Clear the grid before rendering
+  grid.innerHTML = ""; 
   data.forEach((student) => {
-    // Create a card for each student
+
     const card = document.createElement("div");
     card.className =
       "bg-white p-4 rounded-xl shadow-md text-center hover:shadow-xl transition hover:scale-110";
 
-    // Add content to the card
     card.innerHTML = `
           <a href="${student.img}">
             <img src="${student.img}" 
                onerror="this.onerror=null;this.src='./CSE 23 Photos/default.jpg';"
-               class="w-24 h-24 mx-auto rounded-full border-2 border-purple-500 hover:scale-150 duration-200" />          </a>
+               class="w-24 h-24 mx-auto rounded-full border-2 border-purple-500 hover:scale-150 duration-200
+              dark:border-green-500" /> 
+          </a>
           <h2 class="mt-4 font-semibold text-lg">${student.name}</h2>
           <p class="text-gray-600 text-sm">Roll: ${student.roll}</p>
-          <a href="tel:${student.phone}" class="inline-block mt-3 px-4 py-1 border border-purple-500 text-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition hover:scale-105">
+          <a href="tel:${student.phone}" class="inline-block mt-3 px-4 py-1 
+           border border-purple-500 text-purple-500 dark:text-blue-500 rounded-full 
+           hover:bg-purple-500 hover:text-white transition
+           dark:border-blue-500 active:scale-95 ease-in-out
+           ">
             Call Now
           </a>
-          <a href="mailto:${student.email}" class="inline-block mt-3 px-4 py-1 border border-purple-500 text-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition hover:scale-105">
+          <a href="mailto:${student.email}" class="inline-block mt-3 px-4 py-1
+           border border-purple-500 text-purple-500 dark:text-blue-500 rounded-full
+           hover:bg-purple-500 hover:text-white transition
+           dark:border-blue-500 active:scale-95 ease-in-out
+           ">
             E-mail Now
           </a>
         `;
 
-    // Add the card to the grid
     grid.appendChild(card);
   });
 }
 
-// Function to filter students based on a search keyword
+
 function filterStudents(keyword) {
-  const lower = keyword.toLowerCase(); // Convert keyword to lowercase
+  const lower = keyword.toLowerCase();
   return students.filter(
     (s) =>
-      s.name.toLowerCase().includes(lower) || // Check if name matches
-      s.roll.includes(lower) // Check if roll number matches
+      s.name.toLowerCase().includes(lower) || 
+      s.roll.includes(lower) 
   );
 }
 
-// Render all student cards initially
 renderCards(students);
 
-// Add an event listener to the search box for real-time filtering
 searchBox.addEventListener("input", () => {
-  const filtered = filterStudents(searchBox.value); // Get filtered students
-  renderCards(filtered); // Render the filtered students
+  const filtered = filterStudents(searchBox.value); 
+  renderCards(filtered); 
 });
