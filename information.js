@@ -412,7 +412,7 @@ function renderCards(data) {
 
     const card = document.createElement("div");
     card.className =
-      "bg-white p-4 rounded-xl shadow-md text-center hover:shadow-xl transition hover:scale-110";
+      "bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md text-center hover:shadow-xl transition hover:scale-110";
 
     card.innerHTML = `
           <a href="${student.img}">
@@ -422,7 +422,7 @@ function renderCards(data) {
               dark:border-green-500" /> 
           </a>
           <h2 class="mt-4 font-semibold text-lg">${student.name}</h2>
-          <p class="text-gray-600 text-sm">Roll: ${student.roll}</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Roll: ${student.roll}</p>
           <a href="tel:${student.phone}" class="inline-block mt-3 px-4 py-1 
            border border-purple-500 text-purple-500 dark:text-blue-500 rounded-full 
            hover:bg-purple-500 hover:text-white transition
