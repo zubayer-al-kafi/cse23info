@@ -12,6 +12,41 @@
         Information of CSE 2023
       </h1>
 
+      <!--Image Slider-->
+      <div
+        class="relative w-full max-w-xl overflow-hidden rounded-2xl shadow-lg mb-4 mx-auto"
+      >
+        <!-- Images -->
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out items-center justify-center"
+        >
+          <img id="image" class="w-full" />
+          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+          <p
+            class="text-white text-xl px-4 py-2 rounded"
+          >
+            Memories
+          </p>
+        </div>
+        </div>
+
+        <!-- Prev / Next Buttons -->
+        <button
+          id="prev"
+          class="absolute top-1/2 left-3 text-3xl -translate-y-1/2 bg-gray-300 text-white p-2 rounded-full hover:text-amber-600 hover:scale-110 active:scale-95"
+        >
+          <b>&lt;</b>
+        </button>
+        <button
+          id="next"
+          class="absolute top-1/2 right-3 text-3xl -translate-y-1/2 bg-gray-300 text-white p-2 rounded-full hover:text-amber-600 hover:scale-110 active:scale-95"
+        >
+          <b>&gt;</b>
+        </button>
+      </div>
+
+      
       <!-- Search Box -->
       <div class="mb-6">
         <input
