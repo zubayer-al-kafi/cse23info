@@ -1,8 +1,8 @@
 const imgurl = [
-        "https://picsum.photos/800/400?random=1",
-        "https://picsum.photos/800/400?random=2",
-        "https://picsum.photos/800/400?random=3",
-        "https://picsum.photos/800/400?random=4",
+        "./Memories/1.jpg",
+        "./Memories/2.jpg",
+        "./Memories/3.jpg",
+        "./Memories/4.jpg",
       ];
       const slider = document.getElementById("slider");
       const totalSlides = imgurl.length;
